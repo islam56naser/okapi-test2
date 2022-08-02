@@ -68,6 +68,7 @@ public class CorsHelper {
             .allowedHeader(XOkapiHeaders.AUTHORIZATION)
             .allowedHeader(XOkapiHeaders.REQUEST_ID) // expose response headers
             .allowedHeader(XOkapiHeaders.MODULE_ID)
+            .allowedHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS.toString())
             .exposedHeader(HttpHeaders.LOCATION.toString())
             .exposedHeader(XOkapiHeaders.TRACE)
             .exposedHeader(XOkapiHeaders.TOKEN)
