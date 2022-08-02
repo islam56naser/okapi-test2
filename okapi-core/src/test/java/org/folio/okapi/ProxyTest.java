@@ -1128,6 +1128,7 @@ public class ProxyTest {
       .header("Access-Control-Allow-Origin", "*")
       .header("Access-Control-Expose-Headers", startsWithIgnoringCase(
         "Location,X-Okapi-Trace,X-Okapi-Token,Authorization,X-Okapi-Request-Id"))
+      .header("Access-Control-Expose-Headers", containsStringIgnoringCase("Access-Control-Allow-Credentials"))
       .body(equalTo("It works"));
 
     // Post request.
