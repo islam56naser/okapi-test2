@@ -599,6 +599,10 @@ public final class DepResolution {
     Set<String> stickyModules = new HashSet<>();
     for (TenantModuleDescriptor tm : tml) {
       String id = tm.getId();
+	  logger.info("TenantModuleDescriptor:  {}", tm);
+      if (id == null) {
+        logger.info("TenantModuleDescriptor id is null");
+      }
       ModuleId moduleId = new ModuleId(id);
       if (tm.getAction() == TenantModuleDescriptor.Action.enable) {
         if (!moduleId.hasSemVer()) {
